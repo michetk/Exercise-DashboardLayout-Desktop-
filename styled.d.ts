@@ -1,4 +1,4 @@
-import 'styled-components'
+import { Keyframes } from 'styled-components'
 
 declare module 'styled-components' {
   export interface DefaultTheme {
@@ -8,6 +8,17 @@ declare module 'styled-components' {
       textDark: string
       textLight: string
       greyBg: string
+    }
+
+    // aniamation: {
+    //   fadein: {
+    //     from: { opacity: number }
+    //     to: { opacity: number }
+    //   }
+    // }
+
+    aniamation: {
+      fadein: Keyframes
     }
   }
 }

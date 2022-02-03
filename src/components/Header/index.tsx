@@ -1,8 +1,16 @@
-import { HeaderContainer } from './Header.styled'
+import {
+  HeaderContainer,
+  HeaderContentIcon,
+  HeaderTitle,
+} from './Header.styled'
+import { ToggleHeaderMenu } from '../partials/ToogleIcons'
 
 const Header = () => (
   <HeaderContainer>
-    <div>Header</div>
+    <HeaderContentIcon>
+      <ToggleHeaderMenu />
+    </HeaderContentIcon>
+    <HeaderTitle>Header</HeaderTitle>
   </HeaderContainer>
 )
 

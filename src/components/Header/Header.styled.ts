@@ -1,11 +1,26 @@
 import styled from 'styled-components'
-import { theme } from '../../styles/theme'
 
 export const HeaderContainer = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: ${theme.colors.main};
-  color: ${theme.colors.secondary};
+  background: ${(props) => props.theme.colors.main};
+  color: ${(props) => props.theme.colors.secondary};
   height: 50px;
+`
+
+export const HeaderTitle = styled.div`
+  margin: auto;
+`
+
+export const HeaderContentIcon = styled.div`
+  padding: 10px;
+  & svg {
+    height: 30px;
+    animation: ${(props) => props.theme.aniamation.fadein} 0.5s linear;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
 `
