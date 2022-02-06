@@ -1,8 +1,10 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
-export const SidebarContainer = styled.aside`
+export const SidebarContainer = styled.aside<{ isExpanded: boolean }>`
   display: flex;
   justify-content: center;
-  width: 20vw;
-  background: ${(props) => props.theme.colors.greyBg};
-`
+  width: ${({ isExpanded }) => (isExpanded ? '20vw' : '0vw')};
+  background: ${({ theme }) => theme.colors.greyBg};
+  transition: width 0.2s linear;
+  overflow: hidden;
+`;

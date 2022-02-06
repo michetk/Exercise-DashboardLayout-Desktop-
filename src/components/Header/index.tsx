@@ -2,8 +2,8 @@ import {
   HeaderContainer,
   HeaderContentIcon,
   HeaderTitle,
-} from './Header.styled'
-import { ToggleHeaderMenu } from '../partials/ToogleIcons'
+} from './Header.styled';
+import { ToggleHeaderMenu } from '../partials/ToogleIcons';
 
 const Header = () => (
   <HeaderContainer>
@@ -12,6 +12,6 @@ const Header = () => (
     </HeaderContentIcon>
     <HeaderTitle>Header</HeaderTitle>
   </HeaderContainer>
-)
+);
 
-export default Header
+export default Header;

@@ -1,16 +1,12 @@
-import { Menu, ChevronLeft } from '@styled-icons/material'
-import { useCallback, useState } from 'react'
+import { Menu, ChevronLeft } from '@styled-icons/material';
+import { useToggleIconContext } from '../../../hooks/useToogleIcon';
 
 export const ToggleHeaderMenu = () => {
-  const [isExpanded, setExpanded] = useState(false)
-
-  const toggle = useCallback(() => {
-    setExpanded((prev) => !prev)
-  }, [])
+  const { isExpanded, setState } = useToggleIconContext();
 
   return isExpanded ? (
-    <ChevronLeft onClick={toggle} />
+    <ChevronLeft onClick={() => setState()} />
   ) : (
-    <Menu onClick={toggle} />
-  )
-}
+    <Menu onClick={() => setState()} />
+  );
+};

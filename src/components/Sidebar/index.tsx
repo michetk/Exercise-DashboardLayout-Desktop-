@@ -1,9 +1,14 @@
-import { SidebarContainer } from './Sidebar.styled'
+import { useToggleIconContext } from '../../hooks/useToogleIcon';
+import { SidebarContainer } from './Sidebar.styled';
 
-const Sidebar = () => (
-  <SidebarContainer>
-    <div>Sidebar</div>
-  </SidebarContainer>
-)
+const Sidebar = () => {
+  const { isExpanded } = useToggleIconContext();
 
-export default Sidebar
+  return (
+    <SidebarContainer isExpanded={isExpanded}>
+      <div>Sidebar</div>
+    </SidebarContainer>
+  );
+};
+
+export default Sidebar;
