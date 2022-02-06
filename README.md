@@ -1,3 +1,3 @@
 # DashboardLayout
 
-Fixing exercise done with Next.js
+Pinning exercise done with Next.js
