@@ -1,14 +1,10 @@
-import React from 'react'
-import { Container, Content, PageContainer } from './Dashboardd.styled'
-import Header from '../Header'
-import Footer from '../Footer'
-import Sidebar from '../Sidebar'
+import { Props } from '../../ts/interfaces';
+import { Container, Content, PageContainer } from './Dashboardd.styled';
+import Header from '../Header';
+import Footer from '../Footer';
+import Sidebar from '../Sidebar';
 
-interface DashboardLayoutProps {
-  children: React.ReactNode
-}
-
-const DashboarLayout = ({ children }: DashboardLayoutProps) => (
+const DashboarLayout = ({ children }: Props.DashboardLayoutProps) => (
   <Container>
     <Header />
     <Content>
@@ -19,6 +15,6 @@ const DashboarLayout = ({ children }: DashboardLayoutProps) => (
     </Content>
     <Footer />
   </Container>
-)
+);
 
-export default DashboarLayout
+export default DashboarLayout;

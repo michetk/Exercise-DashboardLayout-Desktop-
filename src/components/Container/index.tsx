@@ -1,12 +1,7 @@
-import React from 'react'
-import Head from 'next/head'
+import Head from 'next/head';
+import { Props } from '../../ts/interfaces';
 
-interface ContainerProps {
-  title: string
-  children: React.ReactNode
-}
-
-const Container = ({ title, children }: ContainerProps) => (
+const Container = ({ title, children }: Props.ContainerProps) => (
   <>
     <Head>
       <title>{title}</title>
@@ -16,6 +11,6 @@ const Container = ({ title, children }: ContainerProps) => (
     </Head>
     {children}
   </>
-)
+);
 
-export default Container
+export default Container;

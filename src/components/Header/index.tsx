@@ -3,7 +3,7 @@ import {
   HeaderContentIcon,
   HeaderTitle,
 } from './Header.styled';
-import { ToggleHeaderMenu } from '../partials/ToogleIcons';
+import { ToggleHeaderMenu } from '../ToogleIcons';
 
 const Header = () => (
   <HeaderContainer>
