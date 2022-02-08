@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   Dashboard,
   ShoppingCart,
@@ -11,14 +10,9 @@ import {
   Person,
 } from '@styled-icons/material';
 
-export type MenuItem = {
-  name: string;
-  icon: React.ComponentType;
-  url: string;
-  subItems?: MenuItem[];
-};
+import { Menu } from '../ts/types';
 
-export const MENU_ITEMS: MenuItem[] = [
+export const MENU_ITEMS: Menu.MenuItem[] = [
   {
     name: 'Dashboard',
     icon: Dashboard,

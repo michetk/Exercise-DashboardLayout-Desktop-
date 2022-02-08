@@ -1,16 +1,7 @@
-import React from 'react';
-import { MENU_ITEMS, MenuItem as MenuItemType } from './menuItems';
+import { Menu } from '../ts/types';
+import { MENU_ITEMS } from '../constants/menuItems';
 
-type ItemList = {
-  name: string;
-  icon: React.ComponentType;
-  url: string;
-  id: string;
-  depth: number;
-  subItems?: ItemList[];
-};
-
-function makeItemList(options: MenuItemType[], depth = 0): ItemList[] {
+function makeItemList(options: Menu.MenuItem[], depth = 0): Menu.ItemList[] {
   return options.map((option, idx) => ({
     ...option,
     id: `${depth}.${idx}`,
@@ -21,4 +12,4 @@ function makeItemList(options: MenuItemType[], depth = 0): ItemList[] {
   }));
 }
 
-export const ITEM_LIST: ItemList[] = makeItemList(MENU_ITEMS);
+export const ITEM_LIST: Menu.ItemList[] = makeItemList(MENU_ITEMS);
