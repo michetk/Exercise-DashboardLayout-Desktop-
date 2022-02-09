@@ -17,3 +17,10 @@ export namespace Menu {
     subItems?: ItemList[];
   };
 }
+
+export namespace ToggleIcon {
+  export type ToggleIconContextType = {
+    isExpanded: boolean;
+    setState: () => void;
+  };
+}

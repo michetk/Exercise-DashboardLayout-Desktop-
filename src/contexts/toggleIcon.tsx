@@ -1,18 +1,13 @@
-import React, { createContext, useMemo } from 'react';
+import { createContext, useMemo } from 'react';
 import { useToggleIcon } from '../hooks/useToogleIcon';
+import { ToggleIcon } from '../ts/types/index';
+import { Props } from '../ts/interfaces/index';
 
-type ToggleIconContextType = {
-  isExpanded: boolean;
-  setState: () => void;
-};
+export const ToggleIconContext = createContext(
+  {} as ToggleIcon.ToggleIconContextType
+);
 
-interface ToggleIconProviderProps {
-  children: React.ReactNode;
-}
-
-export const ToggleIconContext = createContext({} as ToggleIconContextType);
-
-const ToggleIconProvider = ({ children }: ToggleIconProviderProps) => {
+const ToggleIconProvider = ({ children }: Props.ToggleIconProviderProps) => {
   const [isExpanded, setState] = useToggleIcon();
 
   const context = useMemo(() => ({ isExpanded, setState }), [isExpanded]);

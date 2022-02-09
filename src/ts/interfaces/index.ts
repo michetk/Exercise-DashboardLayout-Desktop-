@@ -9,4 +9,12 @@ export namespace Props {
   export interface DashboardLayoutProps {
     children: React.ReactNode;
   }
+
+  export interface ToggleSideBarItemContextProps {
+    children: React.ReactNode;
+  }
+
+  export interface ToggleIconProviderProps {
+    children: React.ReactNode;
+  }
 }
