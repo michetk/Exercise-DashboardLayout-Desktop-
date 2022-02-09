@@ -4,7 +4,10 @@ import {
   ExpandLess,
   ExpandMore,
 } from '@styled-icons/material';
-import { useToggleIconContext, useToggleIcon } from '../../hooks/useToogleIcon';
+import {
+  useToggleIconContext,
+  useToggleSideBarContext,
+} from '../../hooks/useToogleIcon';
 
 export const ToggleHeaderMenu = () => {
   const { isExpanded, setState } = useToggleIconContext();
@@ -17,7 +20,7 @@ export const ToggleHeaderMenu = () => {
 };
 
 export const ToggleSideBarItem = () => {
-  const [isExpanded, setState] = useToggleIcon();
+  const { isExpanded, setState } = useToggleSideBarContext();
 
   return isExpanded ? (
     <ExpandLess onClick={setState} />

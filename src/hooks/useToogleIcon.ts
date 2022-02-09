@@ -1,5 +1,6 @@
 import { useCallback, useContext, useState } from 'react';
 import { ToggleIconContext } from '../contexts/toggleIcon';
+import { ToggleSideBarItemContext } from '../contexts/toggleSideBarIcon';
 
 // eslint-disable-next-line no-unused-vars
 type SetState<T> = (prev: T) => T;
@@ -17,5 +18,10 @@ export const useToggleIcon: UseToggleIcon = () => {
 
 export const useToggleIconContext = () => {
   const { isExpanded, setState } = useContext(ToggleIconContext);
+  return { isExpanded, setState };
+};
+
+export const useToggleSideBarContext = () => {
+  const { isExpanded, setState } = useContext(ToggleSideBarItemContext);
   return { isExpanded, setState };
 };
