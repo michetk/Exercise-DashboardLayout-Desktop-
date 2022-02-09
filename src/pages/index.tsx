@@ -1,5 +1,10 @@
-import type { NextPage } from 'next'
+import type { NextPage } from 'next';
+import Container from '../components/Container';
 
-const Home: NextPage = () => <div>Home</div>
+const Home: NextPage = () => (
+  <Container title="Dashboard">
+    <div>Home</div>
+  </Container>
+);
 
-export default Home
+export default Home;
