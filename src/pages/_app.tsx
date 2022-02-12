@@ -4,14 +4,17 @@ import { ThemeProvider } from 'styled-components';
 import { theme } from '../styles/theme';
 import DashboardLayout from '../components/DashboardLayout';
 import ToggleIconProvider from '../contexts/toggleIcon';
+import ToggleSideBarItemProvider from '../contexts/toggleSideBarIcon';
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
   <ToggleIconProvider>
-    <ThemeProvider theme={theme}>
-      <DashboardLayout>
-        <Component {...pageProps} />
-      </DashboardLayout>
-    </ThemeProvider>
+    <ToggleSideBarItemProvider>
+      <ThemeProvider theme={theme}>
+        <DashboardLayout>
+          <Component {...pageProps} />
+        </DashboardLayout>
+      </ThemeProvider>
+    </ToggleSideBarItemProvider>
   </ToggleIconProvider>
 );
 

@@ -1,12 +1,14 @@
 import { useToggleIconContext } from '../../hooks/useToogleIcon';
 import { SidebarContainer } from './Sidebar.styled';
+import MenuItemList from '../MenuItemList';
+import { ITEM_LIST } from '../../constants/listItems';
 
 const Sidebar = () => {
   const { isExpanded } = useToggleIconContext();
 
   return (
     <SidebarContainer isExpanded={isExpanded}>
-      <div>Sidebar</div>
+      <MenuItemList ItemList={ITEM_LIST} />
     </SidebarContainer>
   );
 };

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Menu } from '../types';
+
 export namespace Props {
   export interface ContainerProps {
     title: string;
@@ -16,5 +18,13 @@ export namespace Props {
 
   export interface ToggleIconProviderProps {
     children: React.ReactNode;
+  }
+
+  export interface MenuItemProps {
+    menuItem: Menu.ItemList;
+  }
+
+  export interface ToggleSideBarProps {
+    auternativeFunction?: () => void;
   }
 }
