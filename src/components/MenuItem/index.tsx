@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { MenuItemContainer } from './MenuItem.styled';
-import { ToggleSideBarItem } from '../ToogleIcons/index';
+import { ToggleIconSideBar } from '../ToggleIconSideBar/index';
 import MenuItemList from '../MenuItemList/index';
 import { Props } from '../../ts/interfaces/index';
 import { useMenuItem } from '../../hooks/useMenuItem';
@@ -21,7 +21,7 @@ const MenuItem = ({
           </div>
         </Link>
         {hasSubitem ? (
-          <ToggleSideBarItem auternativeFunction={setExpandedFunction} />
+          <ToggleIconSideBar auternativeFunction={setExpandedFunction} />
         ) : undefined}
       </MenuItemContainer>
       {hasSubitem && isExpanded ? (

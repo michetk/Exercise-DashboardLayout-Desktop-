@@ -3,12 +3,12 @@ import {
   HeaderContentIcon,
   HeaderTitle,
 } from './Header.styled';
-import { ToggleHeaderMenu } from '../ToogleIcons';
+import { ToggleIconHeader } from '../ToggleIconHeader';
 
 const Header = () => (
   <HeaderContainer>
     <HeaderContentIcon>
-      <ToggleHeaderMenu />
+      <ToggleIconHeader />
     </HeaderContentIcon>
     <HeaderTitle>Header</HeaderTitle>
   </HeaderContainer>
