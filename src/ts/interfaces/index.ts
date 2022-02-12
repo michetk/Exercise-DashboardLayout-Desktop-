@@ -27,4 +27,8 @@ export namespace Props {
   export interface ToggleSideBarProps {
     auternativeFunction?: Params.auternativeFunctionType;
   }
+
+  export interface MenuItemListProps {
+    ItemList: Menu.ItemList[];
+  }
 }

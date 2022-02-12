@@ -1,11 +1,7 @@
-import { Menu } from '../../ts/types';
+import { Props } from '../../ts/interfaces/index';
 import MenuItem from '../MenuItem/index';
 
-interface MenuItemListProps {
-  ItemList: Menu.ItemList[];
-}
-
-const MenuItemList = ({ ItemList }: MenuItemListProps) => (
+const MenuItemList = ({ ItemList }: Props.MenuItemListProps) => (
   <div>
     {ItemList.map((option) => (
       <MenuItem menuItem={option} key={option.id} />
