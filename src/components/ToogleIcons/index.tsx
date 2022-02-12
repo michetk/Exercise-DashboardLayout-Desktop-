@@ -4,7 +4,8 @@ import {
   ExpandLess,
   ExpandMore,
 } from '@styled-icons/material';
-import { useToggleIconContext, useToggleIcon } from '../../hooks/useToogleIcon';
+import { useToggleSideBarItem } from '../../hooks/useToggleSideBarItem';
+import { useToggleIconContext } from '../../hooks/useToogleIcon';
 import { Props } from '../../ts/interfaces';
 
 export const ToggleHeaderMenu = () => {
@@ -20,22 +21,14 @@ export const ToggleHeaderMenu = () => {
 export const ToggleSideBarItem = ({
   auternativeFunction,
 }: Props.ToggleSideBarProps) => {
-  const [isExpanded, setState] = useToggleIcon();
-
-  const setStateFunction = () => {
-    setState();
-    if (auternativeFunction) {
-      auternativeFunction();
-    }
-  };
+  const isAuternativeFunction = auternativeFunction || undefined;
+  const [isExpanded, setStateFunction] = useToggleSideBarItem(
+    isAuternativeFunction
+  );
 
   return isExpanded ? (
-    <ExpandLess onClick={setStateFunction} />
+    <ExpandLess onClick={() => setStateFunction()} />
   ) : (
-    <ExpandMore onClick={setStateFunction} />
+    <ExpandMore onClick={() => setStateFunction()} />
   );
-};
-
-ToggleSideBarItem.defaultProps = {
-  auternativeFunction: undefined,
 };

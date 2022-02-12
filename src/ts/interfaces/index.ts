@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Menu } from '../types';
+import { Menu, Params } from '../types';
 
 export namespace Props {
   export interface ContainerProps {
@@ -25,6 +25,6 @@ export namespace Props {
   }
 
   export interface ToggleSideBarProps {
-    auternativeFunction?: () => void;
+    auternativeFunction?: Params.auternativeFunctionType;
   }
 }

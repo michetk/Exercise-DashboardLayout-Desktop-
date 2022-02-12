@@ -1,10 +1,10 @@
 import { createContext, useMemo } from 'react';
 import { useToggleIcon } from '../hooks/useToogleIcon';
-import { ToggleIcon } from '../ts/types/index';
+import { Contexts } from '../ts/types/index';
 import { Props } from '../ts/interfaces/index';
 
 export const ToggleIconContext = createContext(
-  {} as ToggleIcon.ToggleIconContextType
+  {} as Contexts.ToggleIconContextType
 );
 
 const ToggleIconProvider = ({ children }: Props.ToggleIconProviderProps) => {

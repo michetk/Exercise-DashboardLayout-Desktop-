@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 
 export namespace Menu {
@@ -18,7 +19,18 @@ export namespace Menu {
   };
 }
 
-export namespace ToggleIcon {
+export namespace Params {
+  export type auternativeFunctionType = (() => void) | undefined;
+}
+
+export namespace Hooks {
+  export type useMenuItemType = () => [boolean, () => void];
+  export type useToggleSIdebarItemType<T> = (
+    auternativeFunction: T
+  ) => [boolean, () => void];
+}
+
+export namespace Contexts {
   export type ToggleIconContextType = {
     isExpanded: boolean;
     setState: () => void;
