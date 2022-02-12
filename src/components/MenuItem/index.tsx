@@ -15,7 +15,7 @@ const MenuItem = ({
     <>
       <MenuItemContainer depth={depth}>
         <Link href={url} passHref>
-          <div className="linkItem">
+          <div className="grup-icon-name">
             <Icon />
             <span>{name}</span>
           </div>
