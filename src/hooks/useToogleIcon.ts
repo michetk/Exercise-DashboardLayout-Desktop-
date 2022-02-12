@@ -1,16 +1,16 @@
 import { useCallback, useContext, useState } from 'react';
 import { ToggleIconContext } from '../contexts/toggleIconContext';
+import { Hooks, Params } from '../ts/types';
 
-// eslint-disable-next-line no-unused-vars
-type SetState<T> = (prev: T) => T;
-type UseToggleIcon = () => [boolean, () => void];
-
-export const useToggleIcon: UseToggleIcon = () => {
+export const useToggleIcon: Hooks.useToggleIconType = () => {
   const [isExpanded, setExpanded] = useState(false);
 
-  const setState = useCallback((f: SetState<boolean> = (prev) => !prev) => {
-    setExpanded(f);
-  }, []);
+  const setState = useCallback(
+    (f: Params.setStateType<boolean> = (prev) => !prev) => {
+      setExpanded(f);
+    },
+    []
+  );
 
   return [isExpanded, setState];
 };

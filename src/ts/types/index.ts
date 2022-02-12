@@ -21,6 +21,7 @@ export namespace Menu {
 
 export namespace Params {
   export type auternativeFunctionType = (() => void) | undefined;
+  export type setStateType<T> = (prev: T) => T;
 }
 
 export namespace Hooks {
@@ -28,6 +29,7 @@ export namespace Hooks {
   export type useToggleSIdebarItemType<T> = (
     auternativeFunction: T
   ) => [boolean, () => void];
+  export type useToggleIconType = () => [boolean, () => void];
 }
 
 export namespace Contexts {
