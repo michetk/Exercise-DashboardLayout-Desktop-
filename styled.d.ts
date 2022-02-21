@@ -1,17 +1,8 @@
-import { Keyframes } from 'styled-components';
+import { light, animations } from '@/types/module/styled-components';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
-    colors: {
-      main: string;
-      secondary: string;
-      textDark: string;
-      textLight: string;
-      greyBg: string;
-    };
-
-    aniamation: {
-      fadein: Keyframes;
-    };
+    light: light;
+    aniamation: animations;
   }
 }
