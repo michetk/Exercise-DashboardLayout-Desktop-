@@ -5,12 +5,12 @@ export const MenuItemContainer = styled.div<{ depth: number }>`
   justify-content: space-between;
   padding: 10px;
   margin-left: ${({ depth }) => `${depth}rem`};
-  animation: ${(props) => props.theme.aniamation.fadein} 0.5s linear;
+  animation: ${({ theme }) => theme.animations.fadein} 0.5s linear;
 
   & svg {
     height: 30px;
     cursor: pointer;
-    animation: ${(props) => props.theme.aniamation.fadein} 0.5s linear;
+    animation: ${({ theme }) => theme.animations.fadein} 0.5s linear;
   }
 
   & svg :last-child {

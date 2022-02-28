@@ -5,5 +5,5 @@ export const FooterContainer = styled.footer`
   justify-content: center;
   align-items: center;
   height: 80px;
-  background: ${(props) => props.theme.light.colors.primary.main};
+  background: ${({ theme }) => theme.colors.primary.main};
 `;
