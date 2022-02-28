@@ -10,7 +10,7 @@ import {
   Person,
 } from '@styled-icons/material';
 
-import { MenuItem } from './types';
+import { MenuItem } from '../types';
 
 export const MENU_ITEMS: MenuItem[] = [
   {

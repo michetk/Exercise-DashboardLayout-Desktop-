@@ -1,11 +1,11 @@
 import Head from 'next/head';
-import { Props } from './interfaces';
+import { HeadContainerProps } from './interfaces';
 
-const HeadContainer = ({ title, children }: Props) => (
+const HeadContainer = ({ title, children }: HeadContainerProps) => (
   <>
     <Head>
       <title>{title}</title>
-      <meta name="description" content="Dashboard Project" />
+      <meta name="description" content="Dashboard Project done with Next.js" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="icon" href="favicon.ico" type="image/x-icon" />
     </Head>

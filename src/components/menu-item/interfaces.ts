@@ -1,5 +1,5 @@
-import { Menu } from '@/types/types';
+import { MenuList } from '@/constants/menu/types';
 
-export interface Props {
-  menuItem: Menu.ItemList;
+export interface MenuItemProps {
+  menuItem: MenuList;
 }

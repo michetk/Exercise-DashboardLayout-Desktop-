@@ -1,32 +1,29 @@
 import Link from 'next/link';
 import { MenuItemContainer } from './styled';
-import { ToggleIconSideBar } from '../toggle-icon-sidebar';
-import MenuItemList from '../menu-item-list';
-import { Props } from './interfaces';
-import { useMenuItem } from '@/hooks/module/menu-item';
+import ToggleIconSidebar from '../toggle-icon-sidebar';
+import MenuList from '../menu-list';
+import { MenuItemProps } from './interfaces';
+import { useMenuItem } from '@/hooks/module/use-menu-item';
 
 const MenuItem = ({
   menuItem: { name, icon: Icon, url, depth, subItems },
-}: Props) => {
-  const hasSubitem = subItems && subItems.length > 0;
-  const [isExpanded, setExpandedFunction] = useMenuItem();
+}: MenuItemProps) => {
+  const [isExpanded, setExpanded] = useMenuItem();
 
   return (
     <>
       <MenuItemContainer depth={depth}>
         <Link href={url} passHref>
-          <div className="grup-icon-name">
+          <div className="link-menu">
             <Icon />
             <span>{name}</span>
           </div>
         </Link>
-        {hasSubitem ? (
-          <ToggleIconSideBar auternativeFunction={setExpandedFunction} />
+        {subItems ? (
+          <ToggleIconSidebar setStateExtended={setExpanded} />
         ) : undefined}
       </MenuItemContainer>
-      {hasSubitem && isExpanded ? (
-        <MenuItemList ItemList={subItems} />
-      ) : undefined}
+      {subItems && isExpanded ? <MenuList list={subItems} /> : undefined}
     </>
   );
 };

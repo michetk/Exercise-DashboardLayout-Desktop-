@@ -1,5 +1,3 @@
-import { Params } from '@/types/types';
-
-export interface Props {
-  auternativeFunction?: Params.auternativeFunctionType;
+export interface ToggleIconSideBarProps {
+  setStateExtended: () => void;
 }

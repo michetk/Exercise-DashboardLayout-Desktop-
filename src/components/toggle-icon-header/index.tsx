@@ -1,12 +1,12 @@
 import { Menu, ChevronLeft } from '@styled-icons/material';
-import { useToggleContext } from '@/hooks/global/toggle';
+import { useToggleIconHeaderContext } from '@/hooks/module/use-toggle-icon-header';
 
 export const ToggleIconHeader = () => {
-  const [isExpanded, setState] = useToggleContext();
+  const [isExpanded, setExpanded] = useToggleIconHeaderContext();
 
   return isExpanded ? (
-    <ChevronLeft onClick={() => setState()} />
+    <ChevronLeft onClick={setExpanded} />
   ) : (
-    <Menu onClick={() => setState()} />
+    <Menu onClick={setExpanded} />
   );
 };

@@ -13,11 +13,11 @@ export const MenuItemContainer = styled.div<{ depth: number }>`
     animation: ${({ theme }) => theme.animations.fadein} 0.5s linear;
   }
 
-  & svg :last-child {
-    margin-top: 5px;
+  & svg:last-child {
+    margin-top: 3px;
   }
 
-  .grup-icon-name {
+  .link-menu {
     display: flex;
     align-items: center;
     cursor: pointer;

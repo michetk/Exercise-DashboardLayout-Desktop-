@@ -1,16 +1,15 @@
 import { ExpandLess, ExpandMore } from '@styled-icons/material';
-import { useToggleSidebarItem } from '@/hooks/module/toggle-sidebar-item';
-import { Props } from './interfaces';
+import { useToggleIconSidebar } from '@/hooks/module/use-toggle-icon-sidebar';
+import { ToggleIconSideBarProps } from './interfaces';
 
-export const ToggleIconSideBar = ({ auternativeFunction }: Props) => {
-  const isAuternativeFunction = auternativeFunction || undefined;
-  const [isExpanded, setStateFunction] = useToggleSidebarItem(
-    isAuternativeFunction
-  );
+const ToggleIconSidebar = ({ setStateExtended }: ToggleIconSideBarProps) => {
+  const [isExpanded, setExpanded] = useToggleIconSidebar(setStateExtended);
 
   return isExpanded ? (
-    <ExpandLess onClick={() => setStateFunction()} />
+    <ExpandLess onClick={setExpanded} />
   ) : (
-    <ExpandMore onClick={() => setStateFunction()} />
+    <ExpandMore onClick={setExpanded} />
   );
 };
+
+export default ToggleIconSidebar;

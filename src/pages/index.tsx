@@ -5,8 +5,12 @@ import { Container } from './_styled';
 const Home: NextPage = () => (
   <HeadContainer title="Dashboard">
     <Container>
-      <h1>Home</h1>
-      <h2>SUB</h2>
+      <div>
+        <h1>Home</h1>
+      </div>
+      <div>
+        <h2>SUB</h2>
+      </div>
     </Container>
   </HeadContainer>
 );

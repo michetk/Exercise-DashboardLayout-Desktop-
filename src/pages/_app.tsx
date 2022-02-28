@@ -2,17 +2,17 @@ import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import { ThemeProvider } from 'styled-components';
 import { theme } from '@/styles/themes/theme';
-import DashboardLayout from '../components/dashboard-layout';
-import ToggleIconProvider from '../contexts/toggle-context';
+import Dashboard from '@/components/dashboard';
+import ToggleIconHeaderProvider from '@/contexts/toggle-icon-header';
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
-  <ToggleIconProvider>
+  <ToggleIconHeaderProvider>
     <ThemeProvider theme={theme.light}>
-      <DashboardLayout>
+      <Dashboard>
         <Component {...pageProps} />
-      </DashboardLayout>
+      </Dashboard>
     </ThemeProvider>
-  </ToggleIconProvider>
+  </ToggleIconHeaderProvider>
 );
 
 export default MyApp;

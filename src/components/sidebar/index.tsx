@@ -1,14 +1,14 @@
-import { useToggleContext } from '@/hooks/global/toggle';
 import { SidebarContainer } from './styled';
-import MenuItemList from '../menu-item-list';
-import { ITEM_LIST } from '@/constants/menu-item-list';
+import MenuList from '../menu-list';
+import { ITEM_LIST } from '@/constants/menu/menu-list';
+import { useToggleIconHeaderContext } from '@/hooks/module/use-toggle-icon-header';
 
 const Sidebar = () => {
-  const [isExpanded] = useToggleContext();
+  const [isExpanded] = useToggleIconHeaderContext();
 
   return (
     <SidebarContainer isExpanded={isExpanded}>
-      <MenuItemList ItemList={ITEM_LIST} />
+      <MenuList list={ITEM_LIST} />
     </SidebarContainer>
   );
 };

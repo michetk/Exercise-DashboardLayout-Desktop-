@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const DashboardContainer = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -8,12 +8,12 @@ export const Container = styled.div`
   color: ${({ theme }) => theme.text.primary.light};
 `;
 
-export const Content = styled.div`
+export const DashboardContent = styled.div`
   display: flex;
   flex: 1;
 `;
 
-export const PageContainer = styled.div`
+export const DashboardPage = styled.div`
   display: flex;
   flex: 1;
   justify-content: center;
